@@ -1,3 +1,14 @@
+#basically every group of text is a repeat of the same thing.
+#it starts with $url or the URL or link with the install file
+#its downloaded to $output and can be placed anywhere
+#Invoke-WebRequest -Uri $url -OutFile $output takes our 2 variables and does what I want with them
+#the Write-Output command just gives you information in the shell when you run the command ao you know its working
+#Set-Location is actually the same as the simple cd command. cd is an alias of 'Set-Location'. 
+#Alias can introduce possible problems and make scripts hard to maintain. So I change cd to Set-location in my scripts
+#so Set-location we are just pointing the script to the install location to then run one of 2 commands in next comments
+#Expand Archive is used only if the downloaded file is a compressed or Zipped Folder to unzip it and where to the Set-Location is used again
+#the start command will then start the .exe to actually run the installer for the application
+
 #chipset
 $url = "https://download.msi.com/dvr_exe/intel_chipset_9.zip"
 $output = "c:\users\Saund\Downloads\chipset.zip"
